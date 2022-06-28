@@ -15,26 +15,27 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
- 
 
-        <ListView x:Name="imgList"
-             HasUnevenRows="True"
-       
-            ItemSelected="imgList_ItemSelected">
-            <ListView.ItemTemplate>
+
+        <CollectionView x:Name="imgList" 
+                SelectionMode="Single"
+                SelectionChanged="imgList_ItemSelected"
+                ItemsSource="{Binding Images}">
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell
-                       ImageSource="{Binding Src}"
-                       Text="{Binding ShortName}"
-                       Detail="{Binding CreationDate}"
-                       TextColor="DodgerBlue"
-                       DetailColor="Gray"
-                    />
-                                            
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="{Binding Src}" />
+                        <Label Grid.Column="1" Text="{Binding ShortName}" />
+                    </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
 
         <Button Text="Details" Margin="10"
             Grid.Row="1"
@@ -63,3 +64,26 @@
     <Image x:Name="img0" Source="/storage/emulated/0/DCIM/Camera/IMG_20220626_075114.jpg" />
     --><!--<Image Source="/storage/emulated/0/DCIM/Camera/IMG_20220626_075114.jpg" />--><!--
 </VerticalStackLayout>-->
+
+
+
+
+    
+    
+<!--<ListView x:Name="imgList"
+             HasUnevenRows="True"
+            ItemSelected="imgList_ItemSelected"
+            ItemsSource="{Binding Images}">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ImageCell
+                       ImageSource="{Binding Src}"
+                       Text="{Binding ShortName}"
+                       Detail="{Binding CreationDate}"
+                       TextColor="DodgerBlue"
+                       DetailColor="Gray"
+                    />
+
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>-->
