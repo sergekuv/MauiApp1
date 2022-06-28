@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhoneWord.Pages.ImageList"
+             Title="ImageList">
+
+    <Grid Padding="5" RowSpacing="1" ColumnSpacing="1">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+ 
+
+        <ListView x:Name="imgList"
+             HasUnevenRows="True"
+       
+            ItemSelected="imgList_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell
+                       ImageSource="{Binding Src}"
+                       Text="{Binding ShortName}"
+                       Detail="{Binding CreationDate}"
+                       TextColor="DodgerBlue"
+                       DetailColor="Gray"
+                    />
+                                            
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+
+        <Button Text="Details" Margin="10"
+            Grid.Row="1"
+            Clicked="OnDetailsButtonClicked" />
+
+        <Button Text="Delete"  Margin="10"
+            Grid.Row="2"
+            Clicked="OnDeleteButtonClicked" />
+
+    </Grid>
+    
+</ContentPage>
+
+<!--<VerticalStackLayout>
+    <Label 
+            Text="Haviggated!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+    <Label 
+            x:Name="testLabel"
+            Text="initial"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+    <Image x:Name="img0" Source="/storage/emulated/0/DCIM/Camera/IMG_20220626_075114.jpg" />
+    --><!--<Image Source="/storage/emulated/0/DCIM/Camera/IMG_20220626_075114.jpg" />--><!--
+</VerticalStackLayout>-->
