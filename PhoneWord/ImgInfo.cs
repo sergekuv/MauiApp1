@@ -41,7 +41,6 @@ namespace PhoneWord
 
                 Image item = new(f, sName, creationDate);
 
-
                 Images.Add(item);   
             }
             return Images;

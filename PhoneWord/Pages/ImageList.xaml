@@ -37,7 +37,7 @@
         </CollectionView>
 
 
-        <Button Text="Details" Margin="10"
+        <Button Text="View" Margin="10"
             Grid.Row="1"
             Clicked="OnDetailsButtonClicked" />
 
@@ -49,41 +49,4 @@
     
 </ContentPage>
 
-<!--<VerticalStackLayout>
-    <Label 
-            Text="Haviggated!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
 
-    <Label 
-            x:Name="testLabel"
-            Text="initial"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-
-    <Image x:Name="img0" Source="/storage/emulated/0/DCIM/Camera/IMG_20220626_075114.jpg" />
-    --><!--<Image Source="/storage/emulated/0/DCIM/Camera/IMG_20220626_075114.jpg" />--><!--
-</VerticalStackLayout>-->
-
-
-
-
-    
-    
-<!--<ListView x:Name="imgList"
-             HasUnevenRows="True"
-            ItemSelected="imgList_ItemSelected"
-            ItemsSource="{Binding Images}">
-    <ListView.ItemTemplate>
-        <DataTemplate>
-            <ImageCell
-                       ImageSource="{Binding Src}"
-                       Text="{Binding ShortName}"
-                       Detail="{Binding CreationDate}"
-                       TextColor="DodgerBlue"
-                       DetailColor="Gray"
-                    />
-
-        </DataTemplate>
-    </ListView.ItemTemplate>
-</ListView>-->
